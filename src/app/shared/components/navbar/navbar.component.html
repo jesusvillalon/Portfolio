@@ -1,1 +1,53 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img class="img-logo" src="../../../../assets/images/jv-logo.png" alt="">
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <input type="checkbox" id="checkbox" />
+      <label for="checkbox" class="toggle">
+        <div class="bars" id="bar1"></div>
+        <div class="bars" id="bar2"></div>
+        <div class="bars" id="bar3"></div>
+      </label>
+    </button>
+    <div
+      class="collapse navbar-collapse justify-content-end"
+      id="navbarTogglerDemo02"
+    >
+      <ul class="navbar-nav nav-underline">
+        <li class="nav-item">
+          <a class="nav-link">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Sobre mí</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Proyectos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Contacto</a>
+        </li>
+
+        <div class="checkbox-wrapper-8 mt-1">
+          <input type="checkbox" id="cb3-8" class="tgl tgl-skewed" />
+          <label
+            for="cb3-8"
+            data-tg-on="Español"
+            data-tg-off="English"
+            class="tgl-btn"
+          ></label>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>
