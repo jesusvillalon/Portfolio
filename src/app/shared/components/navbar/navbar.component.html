@@ -1,7 +1,11 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img class="img-logo" src="../../../../assets/images/jv-logo.png" alt="">
+    <a class="navbar-brand" [routerLink]="['/']">
+      <img
+        class="img-logo"
+        src="../../../../assets/images/jv-logo.png"
+        alt=""
+      />
     </a>
     <button
       class="navbar-toggler"
@@ -21,33 +25,37 @@
       </label>
     </button>
     <div
-      class="collapse navbar-collapse justify-content-end"
+      class="collapse navbar-collapse justify-content-end align-items-center"
       id="navbarTogglerDemo02"
     >
       <ul class="navbar-nav nav-underline">
-        <li class="nav-item">
-          <a class="nav-link">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Sobre mí</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Proyectos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Contacto</a>
-        </li>
-
-        <div class="checkbox-wrapper-8 mt-1">
-          <input type="checkbox" id="cb3-8" class="tgl tgl-skewed" />
-          <label
-            for="cb3-8"
-            data-tg-on="Español"
-            data-tg-off="English"
-            class="tgl-btn"
-          ></label>
-        </div>
+        <ng-container *ngFor="let item of menuItems">
+          <ng-container *ngIf="getLanguage() === item.language">
+            <li class="nav-item" *ngFor="let link of item.links">
+              <a class="nav-link" [routerLink]="[link.route]">{{
+                link.title
+              }}</a>
+            </li>
+            <li class="nav-item" *ngIf="getLanguage() === 'es'">
+              <a class="nav-link" href="#contact">Contacto</a>
+            </li>
+            <li class="nav-item" *ngIf="getLanguage() === 'en'">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ng-container>
+        </ng-container>
       </ul>
+
+      <button
+        (click)="changeLanguage()"
+        class="custom-button mb-3 ms-lg-3 mb-lg-0"
+        [ngClass]="{
+          'es-button': getLanguage() === 'es',
+          'en-button': getLanguage() === 'en'
+        }"
+      >
+        <span class="button-text">{{ getButtonText() }}</span>
+      </button>
     </div>
   </div>
 </nav>

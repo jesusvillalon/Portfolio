@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PortfolioService } from 'src/app/services/portfolio-service.service';
 
 interface Skill {
   name: string;
@@ -12,7 +13,7 @@ interface Skill {
 })
 
 export class HomeComponent {
-
+  private portfolioService = inject(PortfolioService);
 
   public hardSkillsImg: Skill[] = [
     {name: 'Html', img: "../../../assets/logos/html.svg"},
@@ -27,5 +28,9 @@ export class HomeComponent {
     {name: 'Git', img: "../../../assets/logos/git.svg"},
     {name: 'Github', img: "../../../assets/logos/github.svg"},
   ]
+
+  getLanguage(): string{
+    return this.portfolioService.getLanguage();
+  }
 
 }
