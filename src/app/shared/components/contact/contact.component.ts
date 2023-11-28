@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PortfolioService } from 'src/app/services/portfolio-service.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,5 +8,10 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+  private portFolioService = inject(PortfolioService);
+
+  getLanguage(): string {
+    return this.portFolioService.getLanguage();
+  }
 }
 

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ProyectsComponent } from './components/proyects/proyects.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 import { HomeComponent } from './components/home/home.component';
 
 
@@ -16,7 +16,7 @@ import { HomeComponent } from './components/home/home.component';
     HomeComponent,
     AboutMeComponent,
     DashboardComponent,
-    ProyectsComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,

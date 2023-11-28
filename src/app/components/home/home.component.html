@@ -1,6 +1,6 @@
 <app-navbar />
 <!-- Contenido en español -->
-<div *ngIf="getLanguage() === 'es'" class="home-container">
+<div id="header" *ngIf="getLanguage() === 'es'" class="home-container">
   <div class="sticky-anchor"></div>
   <header class="d-flex justify-content-center">
     <div class="header-main-container">
@@ -40,13 +40,13 @@
   </main>
 </div>
 <!-- Contenido en inglés -->
-<div *ngIf="getLanguage() === 'en'" class="home-container">
+<div id="header" *ngIf="getLanguage() === 'en'" class="home-container">
   <div class="sticky-anchor"></div>
   <header class="d-flex justify-content-center">
     <div class="header-main-container">
       <div class="header-container">
         <div class="header-title-container">
-          <p class="p-header-title">Hola, I am</p>
+          <p class="p-header-title">Hello, I am</p>
           <h1 class="h1-header-title">Jesús Villalón</h1>
           <h5 class="h5-header-title">Frontend Developer.</h5>
         </div>

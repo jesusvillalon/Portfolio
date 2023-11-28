@@ -1,1 +1,198 @@
-<p>contact works!</p>
+<link
+  rel="stylesheet"
+  integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE="
+  crossorigin="anonymous"
+/>
+
+<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+<script type="text/javascript" src="https://formkeep-production-herokuapp-com.global.ssl.fastly.net/formkeep-embed.js"></script>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+<!-- Contenido en español -->
+<div *ngIf="getLanguage() === 'es'" class="contact-main-container">
+  <div class="row contact-container">
+    <section>
+      <div class="mt-5">
+        <form
+          class=""
+          target="_self"
+          enctype="multipart/form-data"
+          action="https://formkeep.com/f/e9e25cd119bc"
+          accept-charset="UTF-8"
+          method="POST"
+        >
+          <fieldset>
+            <div class="text-center mb-5"><h2>Contáctame</h2></div>
+            <div class="row">
+              <div
+                class="form-group mb-3 col-sm-12 col-md-6"
+                id="First_Name__div"
+              >
+                <label for="First_Name">Nombre</label>
+                <input
+                  type="text"
+                  name="First Name"
+                  id="First_Name"
+                  class="form-control mt-2"
+                />
+              </div>
+              <div
+                class="form-group mb-3 col-sm-12 col-md-6"
+                id="Last_Name__div"
+              >
+                <label for="Last_Name">Apellidos</label>
+                <input
+                  type="text"
+                  name="Last Name"
+                  id="Last_Name"
+                  class="form-control mt-2"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group mb-3 col-sm-12 col-md-6" id="Email__div">
+                <label title="required" for="Email">Correo</label>
+                <input
+                  type="email"
+                  name="Email"
+                  id="Email"
+                  required="required"
+                  class="form-control mt-2"
+                />
+              </div>
+              <div class="form-group mb-3 col-sm-12 col-md-6" id="Phone__div">
+                <label for="Phone">Teléfono</label>
+                <input
+                  type="tel"
+                  name="Phone"
+                  id="Phone"
+                  class="form-control mt-2"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group mb-3 col-xs-12" id="Message__div">
+                <label title="required" for="Message">Mensaje</label>
+                <textarea
+                  name="Message"
+                  id="Message"
+                  required="required"
+                  class="form-control mt-2"
+                ></textarea>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div class="col-xs-12 mb-5">
+                <input
+                  type="submit"
+                  value="Enviar"
+                  class="btn btn-block send-button"
+                  data-disable-with="Submit"
+                  [routerLink]="['./']"
+                />
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- Contenido en inglés -->
+<div *ngIf="getLanguage() === 'en'" class="contact-main-container">
+  <div class="row contact-container">
+    <section>
+      <div class="mt-5">
+        <form
+          class=""
+          target="_self"
+          enctype="multipart/form-data"
+          action="https://formkeep.com/f/e9e25cd119bc"
+          accept-charset="UTF-8"
+          method="POST"
+        >
+          <fieldset>
+            <div class="text-center mb-5"><h2>Contact Me</h2></div>
+            <div class="row">
+              <div
+                class="form-group mb-3 col-sm-12 col-md-6"
+                id="First_Name__div"
+              >
+                <label for="First_Name">First Name</label>
+                <input
+                  type="text"
+                  name="First Name"
+                  id="First_Name"
+                  autofocus="autofocus"
+                  class="form-control mt-2"
+                />
+              </div>
+              <div
+                class="form-group mb-3 col-sm-12 col-md-6"
+                id="Last_Name__div"
+              >
+                <label for="Last_Name">Last Name</label>
+                <input
+                  type="text"
+                  name="Last Name"
+                  id="Last_Name"
+                  class="form-control mt-2"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group mb-3 col-sm-12 col-md-6" id="Email__div">
+                <label title="required" for="Email">Email</label>
+                <input
+                  type="email"
+                  name="Email"
+                  id="Email"
+                  required="required"
+                  class="form-control mt-2"
+                />
+              </div>
+              <div class="form-group mb-3 col-sm-12 col-md-6" id="Phone__div">
+                <label for="Phone">Phone Number</label>
+                <input
+                  type="tel"
+                  name="Phone"
+                  id="Phone"
+                  class="form-control mt-2"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group mb-3 col-xs-12" id="Message__div">
+                <label title="required" for="Message">Message</label>
+                <textarea
+                  name="Message"
+                  id="Message"
+                  required="required"
+                  class="form-control mt-2"
+                ></textarea>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div class="col-xs-12 mb-5">
+                <input
+                  type="submit"
+                  value="Submit"
+                  class="btn btn-block send-button"
+                  data-disable-with="Submit"
+                  [routerLink]="['./']"
+                />
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PortfolioService } from 'src/app/services/portfolio-service.service';
 
 
 @Component({
@@ -8,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  private portFolioService = inject(PortfolioService);
+
+  getLanguage(): string {
+    return this.portFolioService.getLanguage();
+  }
 }
