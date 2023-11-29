@@ -1,11 +1,25 @@
 .footer-main-container{
   background-color: rgb(212, 208, 205);
   height: 100%;
-  padding: 50px;
+  padding: 10px 50px 50px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 1024px) {
+    padding: 50px;
+   }
 }
-.footer-container{
-  padding: 50px 150px;
+ .footer-container{
+  padding: 50px 10px;
+  @media (min-width: 1024px) {
+    padding: 50px 150px;
+   }
 }
+.contact-right-container{
+  padding: 0 20px;
+}
+
 .link-container{
   text-decoration: none;
   color: black;
@@ -23,9 +37,18 @@
 }
 .buttonUp{
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: flex-end;
-  margin-top: -2.5rem;
+  margin-top: 20px;
+  @media (min-width: 520px) {
+
+  }
+  @media (min-width: 768px) {
+
+  }
+  @media (min-width: 1024px) {
+   margin-top: -2.5rem;
+  }
 }
 .btn{
   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(77,77,77,1) 100% );

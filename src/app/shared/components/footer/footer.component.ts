@@ -14,4 +14,5 @@ export class FooterComponent {
   getLanguage(): string {
     return this.portFolioService.getLanguage();
   }
+
 }
