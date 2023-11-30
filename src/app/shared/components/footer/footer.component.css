@@ -13,7 +13,9 @@
  .footer-container{
   padding: 50px 10px;
   @media (min-width: 1024px) {
-    padding: 50px 150px;
+    padding: 50px 50px;
+    display: flex;
+  justify-content: space-between;
    }
 }
 .contact-right-container{
