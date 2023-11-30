@@ -23,6 +23,7 @@ export class HomeComponent {
     {name: 'React', img: "../../../assets/logos/react.svg"},
     {name: 'TypeScript', img: "../../../assets/logos/typescript.svg"},
     {name: 'Node', img: "../../../assets/logos/node.svg"},
+    {name: 'Npm', img: "../../../assets/logos/npm.svg"},
     {name: 'Express', img: "../../../assets/logos/express.svg"},
     {name: 'MySQL', img: "../../../assets/logos/mysql.svg"},
     {name: 'Git', img: "../../../assets/logos/git.svg"},

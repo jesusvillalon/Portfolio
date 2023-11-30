@@ -3,14 +3,14 @@
 <div id="header" *ngIf="getLanguage() === 'es'" class="home-container">
   <div class="sticky-anchor"></div>
   <header class="">
-    <div class="header-main-container">
-      <div class="header-container ">
-        <div class="header-title-container ">
+    <div class="header-main-container container-fluid">
+      <div class="row header-container justify-content-between">
+        <div class="col-lg-2 header-title-container">
           <p class="p-header-title">Hola, soy</p>
           <h1 class="h1-header-title">Jesús Villalón</h1>
           <h5 class="h5-header-title">Desarrollador Frontend.</h5>
         </div>
-        <div class="img-container ">
+        <div class="col-lg-11 img-container">
           <img
             class="profile-img"
             src="../../../assets/images/profile-img.svg"
@@ -21,36 +21,46 @@
     </div>
   </header>
   <main>
-   <section class="hardSkills-section">
-    <h2 class="text-center">Tecnologías:</h2>
-    <div class="hardSkills-main-container">
-      <div *ngFor="let image of hardSkillsImg" class="hard-skills-container">
-        <img
-          class="hardSkillsImg"
-          [src]="'../../../assets/logos/' + image.img"
-          alt=""
-        />
-        <h6 class="hardSkillsTitle">{{image.name}}</h6>
+    <section class="hardSkills-section">
+      <h2 class="text-center">Tecnologías:</h2>
+      <div class="hardSkills-main-container">
+        <div *ngFor="let image of hardSkillsImg" class="hard-skills-container">
+          <img
+            class="hardSkillsImg"
+            [src]="'../../../assets/logos/' + image.img"
+            alt="hardSkills-logos"
+          />
+          <h6 class="hardSkillsTitle">{{ image.name }}</h6>
+        </div>
       </div>
-    </div>
-   </section>
-   <section>
-    <div class=""></div>
-   </section>
+    </section>
+    <section class="otheSkills-section">
+      <h3 class="text-center mt-5">Otras tecnologías:</h3>
+      <div class="otheSkills-main-container">
+        <div class="other-skills-container">
+          <img class="otherSkillsImg" src="" alt="" />
+          <h6 class="otherSkillsTitle"></h6>
+        </div>
+        <div class="other-skills-container">
+          <img class="otherSkillsImg" src="" alt="" />
+          <h6 class="otherSkillsTitle"></h6>
+        </div>
+      </div>
+    </section>
   </main>
 </div>
 <!-- Contenido en inglés -->
 <div id="header" *ngIf="getLanguage() === 'en'" class="home-container">
   <div class="sticky-anchor"></div>
   <header class="">
-    <div class="header-main-container">
-      <div class="header-container">
-        <div class="header-title-container-en">
+    <div class="header-main-container container-fluid">
+      <div class="row header-container justify-content-between">
+        <div class="col-lg-2 header-title-container-en">
           <p class="p-header-title">Hello, I am</p>
           <h1 class="h1-header-title">Jesús Villalón</h1>
           <h5 class="h5-header-title">Frontend Developer.</h5>
         </div>
-        <div class="img-container">
+        <div class="col-lg-11 img-container">
           <img
             class="profile-img"
             src="../../../assets/images/profile-img.svg"
@@ -61,22 +71,22 @@
     </div>
   </header>
   <main>
-   <section class="hardSkills-section">
-    <h2 class="text-center">Tecnologies:</h2>
-    <div class="hardSkills-main-container">
-      <div *ngFor="let image of hardSkillsImg" class="hard-skills-container">
-        <img
-          class="hardSkillsImg"
-          [src]="'../../../assets/logos/' + image.img"
-          alt=""
-        />
-        <h6 class="hardSkillsTitle">{{image.name}}</h6>
+    <section class="hardSkills-section">
+      <h2 class="text-center">Tecnologies:</h2>
+      <div class="hardSkills-main-container">
+        <div *ngFor="let image of hardSkillsImg" class="hard-skills-container">
+          <img
+            class="hardSkillsImg"
+            [src]="'../../../assets/logos/' + image.img"
+            alt=""
+          />
+          <h6 class="hardSkillsTitle">{{ image.name }}</h6>
+        </div>
       </div>
-    </div>
-   </section>
-   <section>
-    <div class=""></div>
-   </section>
+    </section>
+    <section>
+      <div class=""></div>
+    </section>
   </main>
 </div>
 <app-footer />
