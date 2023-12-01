@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PortfolioService } from 'src/app/services/portfolio-service.service';
 
 @Component({
   selector: 'app-about-me',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent {
+
+  private portfolioService = inject(PortfolioService);
+
+  getLanguage(): string {
+    return this.portfolioService.getLanguage();
+  }
 
 }

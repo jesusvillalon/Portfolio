@@ -44,12 +44,8 @@
   display: flex;
   justify-content: flex-end;
   margin: 40px 0 50px 0;
-  @media (min-width: 520px) {
-  }
-  @media (min-width: 768px) {
-  }
   @media (min-width: 1024px) {
-    margin-top: -2.5rem;
+    margin-top: -2.8rem;
   }
 }
 .btn {

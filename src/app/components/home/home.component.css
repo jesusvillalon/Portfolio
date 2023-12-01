@@ -41,7 +41,6 @@ header {
   position: absolute;
   top: 25px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   @media (min-width: 768px) {
     width: 380px;
@@ -50,10 +49,16 @@ header {
     padding: 40px;
   }
   @media (min-width: 1024px) {
-    width: 640px;
+    width: 600px;
     top: 150px;
-    left: 200px;
-    padding: 40px;
+    left: 150px;
+    padding: 40px 40px 40px 50px;
+  }
+  @media (min-width: 1920px) {
+    width: 660px;
+    top: 250px;
+    left: 450px;
+    padding: 60px 40px 60px 80px;
   }
 }
 
@@ -82,14 +87,20 @@ header {
   @media (min-width: 520px) {
     justify-content: flex-end;
   }
+  @media (min-width: 1920px) {
+    right: 400px;
+  }
 }
 .profile-img {
-  width: 280px;
+  width: 300px;
   @media (min-width: 768px) {
-    width: 300px;
+    width: 400px;
   }
   @media (min-width: 1024px) {
-    width: 600px;
+    width: 500px;
+  }
+  @media (min-width: 1920px) {
+    width: 800px;
   }
 }
 
@@ -99,13 +110,13 @@ main {
     rgba(0, 0, 0, 1) 0%,
     rgba(77, 77, 77, 1) 100%
   );
-  height: 100vh;
+  height: fit-content;
   color: white;
   position: relative;
   z-index: 2;
-  padding-top: 30px;
+  padding: 50px 0;
 }
-.hardSkills-main-container {
+.hardSkills-main-container, .otheSkills-main-container {
   margin-top: 20px;
   display: flex;
   justify-content: center;
@@ -113,7 +124,10 @@ main {
   flex-wrap: wrap;
   gap: 5px;
 }
-.hardSkillsImg {
+.otheSkills-main-container{
+  gap: 30px;
+}
+.hardSkillsImg, .otherSkillsImg {
   background-color: rgba(255, 255, 255, 0.406);
   border-radius: 5px;
   padding: 2px;
@@ -123,7 +137,10 @@ main {
     width: 60px;
   }
   @media (min-width: 1024px) {
-    width: 80px;
+    width: 70px;
+  }
+  @media (min-width: 1920px) {
+    width: 100px;
   }
 }
 .hardSkillsTitle {
@@ -132,6 +149,48 @@ main {
     font-size: 18px;
   }
 }
-.otherSkillsImg{
-  width: 50px;
+
+.cv-button{
+  background:#715c5c;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+.cv-button:hover{
+  background:#fff;
+  color:#715c5c;
+}
+.cv-button:before,.cv-button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:3.5px;
+  width:0;
+  background: #715c5c;
+  transition:400ms ease all;
+}
+.cv-button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.cv-button:hover:before,.cv-button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+.cv-link{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+.cv-button:hover .cv-link{
+  color: black;
 }
