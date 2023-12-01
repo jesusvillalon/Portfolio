@@ -31,15 +31,15 @@
         <ng-container *ngFor="let item of menuItems">
           <ng-container *ngIf="getLanguage() === item.language">
             <li class="nav-item" *ngFor="let link of item.links">
-              <a class="nav-link" [routerLink]="[link.route]">{{
+              <a class="nav-link" [routerLink]="[link.route]" (click)="scrollToTop()">{{
                 link.title
               }}</a>
             </li>
             <li class="nav-item" *ngIf="getLanguage() === 'es'">
-              <a class="nav-link" href="#contact">Contacto</a>
+              <a class="nav-link" (click)="scrollToBottom()">Contacto</a>
             </li>
             <li class="nav-item" *ngIf="getLanguage() === 'en'">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link" (click)="scrollToBottom()">Contact</a>
             </li>
           </ng-container>
         </ng-container>

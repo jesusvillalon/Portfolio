@@ -30,6 +30,13 @@ export class NavbarComponent{
   getButtonText(): string {
     return this.portfolioService.getLanguage() === 'es' ? 'English' : 'Español';
   }
+  scrollToTop(){
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+  scrollToBottom(){
+    const scrollHeight = document.documentElement.scrollHeight;
+    window.scrollTo({ top: scrollHeight, behavior: 'smooth' });
+  }
 
 }
 

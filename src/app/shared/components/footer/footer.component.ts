@@ -15,4 +15,8 @@ export class FooterComponent {
     return this.portFolioService.getLanguage();
   }
 
+  scrollToTop(){
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
 }
