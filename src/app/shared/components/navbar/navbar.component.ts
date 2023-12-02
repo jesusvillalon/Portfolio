@@ -7,7 +7,7 @@ import { PortfolioService } from 'src/app/services/portfolio-service.service';
 })
 
 export class NavbarComponent{
-  menuItems = [
+  public menuItems = [
     { language: 'es', links: [
       { title: 'Inicio', route: '/' },
       { title: 'Sobre mí', route: '/about-me' },

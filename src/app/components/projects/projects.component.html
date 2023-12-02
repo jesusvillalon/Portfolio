@@ -1,5 +1,54 @@
-<app-navbar/>
-<div class="projects-main-container">
-
-</div>
-<app-footer/>
+<app-navbar />
+<ng-container *ngFor="let item of projectsItems">
+  <div *ngIf="getLanguage() === item.language" class="projects-main-container">
+    <h2 class="text-center text-white mb-5">{{ item.title }}</h2>
+    <div *ngFor="let project of item.list" class="project-container">
+      <div class="player mt-5">
+        <img
+          class="cover"
+          src="http://images.genius.com/2216a21a5494b153cb4c24005370d031.700x700x1.jpg"
+          alt="Cover"
+        />
+        <div class="info">
+          <div class="music-info">
+            <p class="title">{{project.name}}</p>
+            <p class="description">{{project.description}}</p>
+          </div>
+          <div class="line"></div>
+          <div class="playtime">
+            <div
+              class="played d-flex align-items-center justify-content-center"
+            >
+              <p class="timeleft mt-4">1:44</p>
+              <img
+                class="img random"
+                src="../../../assets/images/music-icons/random.png"
+              />
+              <img
+                class="img previous"
+                src="../../../assets/images/music-icons/previous.png"
+              />
+              <div class="play-pause-container">
+                <img
+                  class="play"
+                  src="../../../assets/images/music-icons/play.png"
+                />
+                <!-- <img class="img pause" src="../../../assets/images/music-icons/pause.png"> -->
+              </div>
+              <img
+                class="img next"
+                src="../../../assets/images/music-icons/next.png"
+              />
+              <img
+                class="img sound"
+                src="../../../assets/images/music-icons/sound.png"
+              />
+              <p class="songtime mt-4">4:20</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<app-footer />
