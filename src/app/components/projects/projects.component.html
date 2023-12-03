@@ -2,57 +2,63 @@
 <ng-container *ngFor="let item of projectsItems">
   <div *ngIf="getLanguage() === item.language" class="projects-main-container">
     <h2 class="text-center text-white">{{ item.title }}</h2>
-    <div *ngFor="let project of item.list" class="project-container">
-      <div class="player mt-5">
-        <img
-          class="cover"
-          [src]="'../../../assets/images/projects/' + project.img"
-          alt="Cover"
-        />
-        <div class="info">
-          <div class="music-info text-center">
-            <p class="title">{{project.name}}</p>
-            <p class="description">{{project.description}}</p>
-          </div>
-          <div class="line"></div>
-          <div class="playtime">
-            <div
-              class="played d-flex align-items-center justify-content-center"
-            >
-              <p class="timeleft mt-4">1:44</p>
-              <img
-                class="img random"
-                src="../../../assets/images/music-icons/random.png"
-              />
-              <img
-                class="img previous"
-                src="../../../assets/images/music-icons/previous.png"
-                (click)="showPreviousProject()"
-              />
-              <div class="play-pause-container">
+    <div *ngIf="item.list && item.list.length > 0">
+      <div
+        *ngFor="let project of item.list"
+        class="project-container"
+        [style.display]="getProjectDisplayClass(project.id)"
+      >
+        <div class="player mt-5">
+          <img
+            class="cover"
+            [src]="'../../../assets/images/projects/' + project.img"
+            alt="Cover"
+          />
+          <div class="info">
+            <div class="music-info text-center">
+              <h4 class="title">{{ project.name }}</h4>
+              <p class="description">{{ project.description }}</p>
+            </div>
+            <div class="line"></div>
+            <div class="playtime">
+              <div
+                class="played d-flex align-items-center justify-content-center"
+              >
+                <p class="timeleft mt-4">1:44</p>
                 <img
-                  class="play"
-                  src="../../../assets/images/music-icons/play.png"
-                  (click)="playPause()"
-                  *ngIf="!isPlaying"
+                  class="img random"
+                  src="../../../assets/images/music-icons/random.png"
                 />
                 <img
-                  class="pause"
-                  src="../../../assets/images/music-icons/pause.png"
-                  (click)="playPause()"
-                  *ngIf="isPlaying"
-                >
+                  class="img previous"
+                  src="../../../assets/images/music-icons/previous.png"
+                  (click)="showPreviousProject()"
+                />
+                <div class="play-pause-container">
+                  <img
+                    class="play"
+                    src="../../../assets/images/music-icons/play.png"
+                    (click)="playPause()"
+                    *ngIf="!isPlaying"
+                  />
+                  <img
+                    class="pause"
+                    src="../../../assets/images/music-icons/pause.png"
+                    (click)="playPause()"
+                    *ngIf="isPlaying"
+                  />
+                </div>
+                <img
+                  class="img next"
+                  src="../../../assets/images/music-icons/next.png"
+                  (click)="showNextProject()"
+                />
+                <img
+                  class="img sound"
+                  src="../../../assets/images/music-icons/sound.png"
+                />
+                <p class="songtime mt-4">4:20</p>
               </div>
-              <img
-                class="img next"
-                src="../../../assets/images/music-icons/next.png"
-                (click)="showNextProject()"
-              />
-              <img
-                class="img sound"
-                src="../../../assets/images/music-icons/sound.png"
-              />
-              <p class="songtime mt-4">4:20</p>
             </div>
           </div>
         </div>
