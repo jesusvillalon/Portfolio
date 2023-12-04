@@ -1,14 +1,14 @@
 <app-navbar />
 <ng-container *ngFor="let item of projectsItems">
   <div *ngIf="getLanguage() === item.language" class="projects-main-container">
-    <h2 class="text-center text-white">{{ item.title }}</h2>
-    <div *ngIf="item.list && item.list.length > 0">
+    <h2 class="text-center text-white my-5">{{ item.title }}</h2>
+    <div *ngIf="item.list && item.list.length > 0" class="content-container">
       <div
         *ngFor="let project of item.list"
         class="project-container"
         [style.display]="getProjectDisplayClass(project.id)"
       >
-        <div class="player mt-5">
+        <div class="player">
           <img
             class="cover"
             [src]="'../../../assets/images/projects/' + project.img"
@@ -16,15 +16,15 @@
           />
           <div class="info">
             <div class="music-info text-center">
-              <h4 class="title">{{ project.name }}</h4>
+              <h4 class="title mt-5">{{ project.name }}</h4>
               <p class="description">{{ project.description }}</p>
             </div>
             <div class="line"></div>
             <div class="playtime">
               <div
-                class="played d-flex align-items-center justify-content-center"
+                class="played"
               >
-                <p class="timeleft mt-4">1:44</p>
+                <p class="timeleft mt-3">1:44</p>
                 <img
                   class="img random"
                   src="../../../assets/images/music-icons/random.png"
@@ -57,7 +57,7 @@
                   class="img sound"
                   src="../../../assets/images/music-icons/sound.png"
                 />
-                <p class="songtime mt-4">4:20</p>
+                <p class="songtime mt-3">4:20</p>
               </div>
             </div>
           </div>

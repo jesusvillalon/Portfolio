@@ -22,7 +22,7 @@ export class ProjectsComponent {
       {id: 3, name: 'Reading List', img: 'reading-list.png',
       description: 'Lista de libros con su correspondiente lista de lectura, la cual puedo ir agregando o eliminando el libro que esté leyendo o haya leído. También podemos realizar un filtrado por número de páginas que tiene cada libro y otro por género, donde podemos elegír más de uno a la vez.'},
       {id: 4, name: 'Mapa', img: 'map.jpg',
-      description: 'Aplicación creada con AngularJs, TypeScript y Angular Material donde utilizamos la API de Mapbox para obtener los datos del mapa. Podemos obtener una vista amplia de este, hacer zoom mediante una barra de progreso y marcadores, manteniendo la persistencia de datos de estos.'},
+      description: 'Aplicación creada con AngularJs, TypeScript y Angular Material donde utilizamos la API de Mapbox para obtener los datos del mapa. En ella podemos obtener una vista amplia de este, hacer zoom mediante una barra de progreso y marcadores, manteniendo la persistencia de datos de estos.'},
       {id: 5, name: 'Héroes', img: 'heroes-app.jpg',
       description: 'En este proyecto se realiza un CRUD completo de creación, lectura, edición y borrado de una lista de superhéroes. Además tenemos un sistema de registro y login para que cada usuario pueda tener los héroes que estime conveniente, haciendo uso de los "Guards" de Angular para la autenticación.'},
       {id: 6, name: 'Gifs', img: 'gif-app.jpg',
