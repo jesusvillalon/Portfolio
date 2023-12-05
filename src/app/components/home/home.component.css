@@ -15,13 +15,16 @@ header {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   position: relative;
   @media only screen and (min-width: 520px) and (orientation: landscape) {
     height: 100vh;
   }
   @media (min-width: 1024px) {
-    height: 68vh;
+    height: 90vh;
+  }
+  @media (min-width: 3360px) {
+    height: 80vh;
   }
 
 }
@@ -71,10 +74,22 @@ header {
     padding: 20px;
   }
   @media (min-width: 1920px) {
+    width: 650px;
+    top: 180px;
+    left: 200px;
+    padding: 70px 40px 70px 80px;
+  }
+  @media (min-width: 2560px) {
     width: 800px;
     top: 250px;
-    left: 450px;
+    left: 300px;
     padding: 100px 40px 100px 120px;
+  }
+  @media (min-width: 3360px) {
+    width: 1000px;
+    top: 350px;
+    left: 450px;
+    padding: 100px 40px 100px 200px;
   }
 }
 
@@ -85,6 +100,9 @@ header {
   @media only screen and (max-width: 1024px) and (orientation: landscape) {
     font-size: 50px;
   }
+  @media (min-width: 3360px) {
+    font-size: 70px;
+  }
 }
 .p-header-title {
   @media (min-width: 1024px) {
@@ -93,6 +111,9 @@ header {
   @media only screen and (max-width: 1024px) and (orientation: landscape) {
     font-size: 20px;
   }
+  @media (min-width: 3360px) {
+    font-size: 40px;
+  }
 }
 .h5-header-title {
   @media (min-width: 1024px) {
@@ -100,6 +121,9 @@ header {
   }
   @media only screen and (max-width: 1024px) and (orientation: landscape) {
     font-size: 25px;
+  }
+  @media (min-width: 3360px) {
+    font-size: 45px;
   }
 }
 
@@ -113,6 +137,9 @@ header {
     justify-content: flex-end;
   }
   @media (min-width: 1920px) {
+    right: 200px;
+  }
+  @media (min-width: 3360px) {
     right: 400px;
   }
 }
@@ -131,7 +158,13 @@ header {
     width: 400px;
   }
   @media (min-width: 1920px) {
+    width: 600px;
+  }
+  @media (min-width: 2560px) {
     width: 900px;
+  }
+  @media (min-width: 3360px) {
+    width: 1000px;
   }
 }
 
