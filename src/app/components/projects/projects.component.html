@@ -1,7 +1,7 @@
 <app-navbar />
 <ng-container *ngFor="let item of projectsItems">
   <div *ngIf="getLanguage() === item.language" class="projects-main-container">
-    <h2 class="text-center text-white mt-3 mb-4">{{ item.title }}</h2>
+    <h2 class="text-center text-white">{{ item.title }}</h2>
     <div *ngIf="item.list && item.list.length > 0" class="content-container">
       <div
         *ngFor="let project of item.list"
