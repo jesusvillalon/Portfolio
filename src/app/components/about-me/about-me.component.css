@@ -6,7 +6,7 @@
   );
   height: fit-content;
   color: white;
-  padding: 100px 25px 50px 25px;
+  padding: 100px 30px 50px 30px;
   @media (min-width: 768px) {
     padding: 150px 50px 50px 50px;
   }
@@ -49,4 +49,7 @@
   @media (min-width: 1024px) {
     width: 500px;
   }
+}
+span{
+  font-size: 40px;
 }
